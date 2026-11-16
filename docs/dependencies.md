@@ -12,4 +12,5 @@ all ABI/toolchain review remain required; native compilation was exercised only
 with the available Termux ARM64 toolchain. Android-compatible parser/mount APIs
 still use Android Uri and Store's current Android contracts. Desktop/iOS migration
 must preserve metadata, random access and mutation/recovery semantics.
-Original-code licensing is pending owner selection (LICENSE.md).
+Original libinfinivault code is licensed under MIT (LICENSE.md). Bundled
+lwext4 code retains its GPL-2.0 license and notice.

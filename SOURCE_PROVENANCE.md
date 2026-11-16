@@ -10,7 +10,7 @@ staging path, adding cooperative cancellation, typed copy counts and unsafe-path
 reporting. The host still supplies capacity-checked output streams and owns its
 leases. No archive codec, third-party dependency or license was changed.
 
-Extracted structurally from [gretchycat/infinifolder](https://github.com/gretchycat/infinifolder) baseline 9233495, after compatibility checkpoint b893dfd. Original packages/JNI names and notices are retained. Historical commits remain in the upstream repository; the table records original source paths and SHA-256 at extraction. No codec or filesystem rewrite is part of this move. Root licensing is pending; see LICENSE.md.
+Extracted structurally from [gretchycat/infinifolder](https://github.com/gretchycat/infinifolder) baseline 9233495, after compatibility checkpoint b893dfd. Original packages/JNI names and notices are retained. Historical commits remain in the upstream repository; the table records original source paths and SHA-256 at extraction. No codec or filesystem rewrite is part of this move. Original libinfinivault code is licensed under MIT; bundled lwext4 retains its GPL-2.0 license.
 
 | Original path | Extracted path | Original SHA-256 |
 | --- | --- | --- |

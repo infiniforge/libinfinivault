@@ -28,7 +28,7 @@ Run `gradle :vault-android:testDebugUnitTest` and the relevant assemble task.
 
 Source dependencies are pinned in `dependencies.lock.json` and fetched inside this checkout. No sibling source directories are used.
 
-Original-code licensing is pending owner selection; see LICENSE.md. No original implementation is rewritten or relicensed by this move.
+Original libinfinivault code is licensed under MIT; bundled components keep their own terms. The extraction did not rewrite the original implementation.
 
 ## Current boundary
 
