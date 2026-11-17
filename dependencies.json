@@ -1,14 +1,14 @@
 {
   "libinfinistream": {
-    "url": "https://github.com/gretchycat/libinfinistream.git",
+    "url": "https://github.com/infiniforge/libinfinistream.git",
     "commit": "e86167f2fd0c2c19d24140f05478099fdb1a693b"
   },
   "libinfinistore": {
-    "url": "https://github.com/gretchycat/libinfinistore.git",
+    "url": "https://github.com/infiniforge/libinfinistore.git",
     "commit": "faee836518fca09d2c9ba8cedb174b1a80779809"
   },
   "libinfinisound": {
-    "url": "https://github.com/gretchycat/libinfinisound.git",
+    "url": "https://github.com/infiniforge/libinfinisound.git",
     "commit": "61a4644bdfd216597bc3fe24ef3a55984bcc2363"
   }
 }

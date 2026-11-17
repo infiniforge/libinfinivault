@@ -2,19 +2,19 @@
   "directory": "dependencies",
   "repositories": {
     "libinfinicore": {
-      "url": "https://github.com/gretchycat/libinfinicore.git",
+      "url": "https://github.com/infiniforge/libinfinicore.git",
       "commit": "0f98a0e9c94e9de0133e4e1ab53a1274b0fd33d8"
     },
     "libinfinisound": {
-      "url": "https://github.com/gretchycat/libinfinisound.git",
+      "url": "https://github.com/infiniforge/libinfinisound.git",
       "commit": "14b482e314a661ebdbc346d111884b874bc42adf"
     },
     "libinfinistore": {
-      "url": "https://github.com/gretchycat/libinfinistore.git",
+      "url": "https://github.com/infiniforge/libinfinistore.git",
       "commit": "c4c29cb9f47bc7ef9e0ab722cab49fc83005cfb8"
     },
     "libinfinistream": {
-      "url": "https://github.com/gretchycat/libinfinistream.git",
+      "url": "https://github.com/infiniforge/libinfinistream.git",
       "commit": "0dcb1b17b0450d900d0581f2fd2c13bf0dd32e4d"
     }
   }
