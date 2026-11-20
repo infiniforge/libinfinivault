@@ -82,12 +82,18 @@ internal class ExtFileSystem(private val device: BlockDevice, private val tempDi
             val blockShift = u32(24)
             if (blockShift > 6) throw IOException("Unsupported ext block size")
             val blockSize = 1024L shl blockShift.toInt()
+            val totalBlocksLow = u32(4)
+            val totalBlocksHigh = if (incompat and 0x80L != 0L) u32(336) else 0L
+            val totalBlocks = totalBlocksLow or (totalBlocksHigh shl 32)
+            val totalBytes = if (totalBlocksHigh <= Int.MAX_VALUE && totalBlocks <= device.size / blockSize) {
+                runCatching { Math.multiplyExact(totalBlocks, blockSize) }.getOrNull()
+            } else null
             val free = u32(12) or (if (incompat and 0x80L != 0L) u32(344) shl 32 else 0L)
             val type = if (incompat and (0x40L or 0x80L or 0x200L) != 0L || u32(100) and 0x400L != 0L) "ext4"
                 else if (u32(92) and 4 != 0L) "ext3" else "ext2"
             val freeBytes = if (free >= 0 && free <= device.size / blockSize) free * blockSize else null
             return FileSystemInfo(type, null, "Ext superblock; mutation features checked separately", caseSensitive = true,
-                availableBytes = freeBytes, allocationUnitBytes = blockSize)
+                availableBytes = freeBytes, allocationUnitBytes = blockSize, totalBytes = totalBytes)
         }
     }
 }

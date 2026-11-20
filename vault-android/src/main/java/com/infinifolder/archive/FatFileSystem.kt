@@ -83,7 +83,10 @@ class FatFileSystem(
             allocationUnitBytes = clusterSize.toLong())
 
     fun fileSystemInfoWithSpace(): com.infinifolder.storage.FileSystemInfo =
-        fileSystemInfo.copy(availableBytes = freeClusterBytes())
+        fileSystemInfo.copy(
+            availableBytes = freeClusterBytes(),
+            totalBytes = Math.multiplyExact(totalSectors, bytesPerSector.toLong()),
+        )
 
     /** Scan the allocation table in bounded chunks, not one network read per cluster. */
     private fun freeClusterBytes(): Long {

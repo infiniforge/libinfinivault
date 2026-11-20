@@ -3,7 +3,7 @@
   "repositories": {
     "libinfinicore": {
       "url": "https://github.com/infiniforge/libinfinicore.git",
-      "commit": "0f98a0e9c94e9de0133e4e1ab53a1274b0fd33d8"
+      "commit": "6a1076bfec821c1fe1b97ec1d518b63e000a5903"
     },
     "libinfinisound": {
       "url": "https://github.com/infiniforge/libinfinisound.git",

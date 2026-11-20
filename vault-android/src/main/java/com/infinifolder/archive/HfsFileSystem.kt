@@ -65,7 +65,8 @@ internal class HfsFileSystem(private val device: BlockDevice, base: Long = 0) {
     }
 
     fun info() = FileSystemInfo(type, null, "$type volume header at ${volumeBase + 1024}",
-        caseSensitive = if (type == "HFSX") null else false, readOnly = true, allocationUnitBytes = blockSize)
+        caseSensitive = if (type == "HFSX") null else false, readOnly = true, allocationUnitBytes = blockSize,
+        totalBytes = Math.multiplyExact(totalBlocks, blockSize))
 
     private fun extents(b: ByteArray, p: Int): List<Extent> {
         val result = ArrayList<Extent>()

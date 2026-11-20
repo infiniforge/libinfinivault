@@ -48,7 +48,8 @@ internal class UfsFileSystem(private val device: BlockDevice, private val base: 
     }
 
     fun info() = FileSystemInfo("UFS$version", null, "UFS superblock at ${base + header.offset}",
-        caseSensitive = true, readOnly = true, allocationUnitBytes = fragmentSize.toLong())
+        caseSensitive = true, readOnly = true, allocationUnitBytes = fragmentSize.toLong(),
+        totalBytes = Math.multiplyExact(volumeFragments, fragmentSize.toLong()))
 
     private fun read(offset: Long, size: Int): ByteArray {
         val volumeBytes = volumeFragments * fragmentSize

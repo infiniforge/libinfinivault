@@ -55,7 +55,7 @@ internal class NtfsFileSystem(private val device: BlockDevice, private val base:
     }
 
     fun info() = FileSystemInfo(volumeVersion, null, "NTFS boot sector, MFT and volume information",
-        caseSensitive = false, readOnly = true, allocationUnitBytes = clusterSize)
+        caseSensitive = false, readOnly = true, allocationUnitBytes = clusterSize, totalBytes = volumeBytes)
 
     private fun encodedSize(value: Int): Int = when {
         value in 1..127 -> (value * clusterSize).takeIf { it <= Int.MAX_VALUE }?.toInt() ?: 0
